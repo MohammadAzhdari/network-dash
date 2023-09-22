@@ -519,7 +519,111 @@
           </div>
         </div>
       </div>
+      <div class="row">
+        <div class="col-md-6 col-12 mt-4">
+          <div class="card mb-4">
+            <div class="card-header pb-0">
+              <h6>System Information</h6>
+            </div>
+            <div class="card-body px-0 pt-0 pb-2">
+              <div class="table-responsive p-0">
+                <table class="table align-items-center mb-0">
+                  <thead>
+                    <tr>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Parameter</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Value</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                        Details</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="p-3">
+                        <p class="text-sm font-weight-normal mb-0">Server is running</p>
+                      </td>
+                      <td>
+                        <p class="text-sm font-weight-normal mb-0 text-success">yes</p>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <p class="text-sm font-weight-normal mb-0">localhost:8080</p>
+                      </td>
 
+                    </tr>
+                    <tr>
+                      <td class="p-3">
+                        <p class="text-sm font-weight-normal mb-0">Number of hosts (enabled/disabled/templates)</p>
+                      </td>
+                      <td>
+                        <p class="text-sm font-weight-normal mb-0">83</p>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <p class="text-sm font-weight-normal mb-0 text-success">2/0/81</p>
+                      </td>
+
+                    </tr>
+                    <tr>
+                      <td class="p-3">
+                        <p class="text-sm font-weight-normal mb-0">Number of items (enabled/disabled/not supported)</p>
+                      </td>
+                      <td>
+                        <p class="text-sm font-weight-normal mb-0">120</p>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <p class="text-sm font-weight-normal mb-0 text-danger">114/0/6</p>
+                      </td>
+
+                    </tr>
+                    <tr>
+                      <td class="p-3">
+                        <p class="text-sm font-weight-normal mb-0">Number of triggers (enabled/disabled [problem/ok])</p>
+                      </td>
+                      <td>
+                        <p class="text-sm font-weight-normal mb-0">65</p>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <p class="text-sm font-weight-normal mb-0 text-success">65/02/63</p>
+                      </td>
+
+                    </tr> <tr>
+                      <td class="p-3">
+                        <p class="text-sm font-weight-normal mb-0">Number of users (online)</p>
+                      </td>
+                      <td>
+                        <p class="text-sm font-weight-normal mb-0">2</p>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <p class="text-sm font-weight-normal mb-0">1</p>
+                      </td>
+
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-12 mt-5">
+          <div class="card z-index-2">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+              <div class="bg-gradient-warning shadow-warning border-radius-lg py-3 pe-1">
+                <div class="chart">
+                  <canvas id="chart-line" class="chart-canvas" height="170"></canvas>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <h6 class="mb-4 ">Average Processors Load Graph </h6>
+              <p class="text-sm "> (<span class="font-weight-bolder">+15%</span>) increase than yesterday. </p>
+              <hr class="dark horizontal">
+              <div class="d-flex ">
+                <i class="material-icons text-sm my-auto me-1">schedule</i>
+                <p class="mb-0 text-sm"> updated 4 min ago </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     </div>
   </main>
@@ -610,7 +714,87 @@
   <script src="../../assets/js/plugins/chartjs.min.js"></script>
   <script src="../../assets/js/plugins/world.js"></script>
   <script>
+    var ctx2 = document.getElementById("chart-line").getContext("2d");
+    new Chart(ctx2, {
+      type: "line",
+      data: {
+        labels: ["11:56", "12:05", "12:14", "12:23", "12:32", "12:41", "12:50"],
+        datasets: [{
+          label: "Processor Load",
+          tension: 0,
+          borderWidth: 0,
+          pointRadius: 5,
+          pointBackgroundColor: "rgba(255, 255, 255, .8)",
+          pointBorderColor: "transparent",
+          borderColor: "rgba(255, 255, 255, .8)",
+          borderColor: "rgba(255, 255, 255, .8)",
+          borderWidth: 4,
+          backgroundColor: "transparent",
+          fill: true,
+          data: [1.7, 1, 0.7, 1.8, 2.2, 2.4, 1.2],
+          maxBarThickness: 6
 
+        }],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false,
+          }
+        },
+        interaction: {
+          intersect: false,
+          mode: 'index',
+        },
+        scales: {
+          y: {
+            grid: {
+              drawBorder: false,
+              display: true,
+              drawOnChartArea: true,
+              drawTicks: false,
+              borderDash: [5, 5],
+              color: 'rgba(255, 255, 255, .2)'
+            },
+            ticks: {
+              display: true,
+              color: '#f8f9fa',
+              padding: 10,
+              font: {
+                size: 14,
+                weight: 300,
+                family: "Roboto",
+                style: 'normal',
+                lineHeight: 1
+              },
+            }
+          },
+          x: {
+            grid: {
+              drawBorder: false,
+              display: false,
+              drawOnChartArea: false,
+              drawTicks: false,
+              borderDash: [5, 5]
+            },
+            ticks: {
+              display: true,
+              color: '#f8f9fa',
+              padding: 10,
+              font: {
+                size: 14,
+                weight: 300,
+                family: "Roboto",
+                style: 'normal',
+                lineHeight: 1
+              },
+            }
+          },
+        },
+      },
+    });
     // Initialize the vector map
     var map = new jsVectorMap({
       selector: "#map",
