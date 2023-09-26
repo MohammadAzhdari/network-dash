@@ -216,9 +216,9 @@
               </a>
             </li>
             <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Dashboards</a></li>
-            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Servers Status</li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Login</li>
           </ol>
-          <h6 class="font-weight-bolder mb-0">Servers Status</h6>
+          <h6 class="font-weight-bolder mb-0">Login</h6>
         </nav>
         <div class="sidenav-toggler sidenav-toggler-inner d-xl-block d-none ">
           <a href="javascript:;" class="nav-link text-body p-0">
@@ -267,197 +267,54 @@
     </nav>
 
     <div class="container-fluid py-4">
-      <div class="row mt-4">
-        <div class="col-lg-4 col-sm-6">
-          <div class="card h-100">
-            <div class="card-header pb-0 p-3">
-              <div class="d-flex justify-content-between">
-                <h6 class="mb-0">Server A</h6>
-                <button type="button"
-                  class="btn btn-icon-only btn-rounded btn-outline-secondary mb-0 ms-2 btn-sm d-flex align-items-center justify-content-center"
-                  data-bs-toggle="tooltip" data-bs-placement="bottom" title=""
-                  data-bs-original-title="See Resources Server">
-                  <i class="material-icons text-sm">priority_high</i>
-                </button>
-              </div>
-            </div>
-            <div class="card-body pb-0 p-3 mt-4">
-              <div class="row">
-                <div class="col-7 text-start">
-                  <div class="chart">
-                    <canvas id="chart-pie1" class="chart-canvas" height="200"></canvas>
+      <div class="row">
+        <div class="col-lg-4 col-md-8 col-12 mx-auto">
+          <div class="card z-index-0 fadeIn3 fadeInBottom">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+              <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
+                <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Sign in</h4>
+                <!-- <div class="row mt-3">
+                  <div class="col-2 text-center ms-auto">
+                    <a class="btn btn-link px-3" href="javascript:;">
+                      <i class="fa fa-facebook text-white text-lg"></i>
+                    </a>
                   </div>
-                </div>
-                <div class="col-5 my-auto">
-                  <span class="badge badge-md badge-dot me-4 d-block text-start">
-                    <i class="bg-info"></i>
-                    <span class="text-dark text-xs">Free Space</span>
-                  </span>
-                  <span class="badge badge-md badge-dot me-4 d-block text-start">
-                    <i class="bg-primary"></i>
-                    <span class="text-dark text-xs">Used Space</span>
-                  </span>
-                  <!-- <span class="badge badge-md badge-dot me-4 d-block text-start">
-                    <i class="bg-dark"></i>
-                    <span class="text-dark text-xs">Organic</span>
-                  </span>
-                  <span class="badge badge-md badge-dot me-4 d-block text-start">
-                    <i class="bg-secondary"></i>
-                    <span class="text-dark text-xs">Referral</span>
-                  </span> -->
-                </div>
-              </div>
-            </div>
-            <div class="card-footer pt-0 pb-0 p-3 d-flex align-items-center">
-              <div class="w-60">
-                <p class="text-sm">
-                  Resources occupied by the server
-                </p>
-              </div>
-              <div class="w-40 text-end">
-                <a class="btn bg-light mb-3 text-end" href="javascript:;">Read more</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <div class="card h-100">
-            <div class="card-header pb-0 p-3">
-              <div class="d-flex justify-content-between">
-                <h6 class="mb-0">Server B</h6>
-                <button type="button"
-                  class="btn btn-icon-only btn-rounded btn-outline-secondary mb-0 ms-2 btn-sm d-flex align-items-center justify-content-center"
-                  data-bs-toggle="tooltip" data-bs-placement="bottom" title=""
-                  data-bs-original-title="See Resources Server">
-                  <i class="material-icons text-sm">priority_high</i>
-                </button>
-              </div>
-            </div>
-            <div class="card-body pb-0 p-3 mt-4">
-              <div class="row">
-                <div class="col-7 text-start">
-                  <div class="chart">
-                    <canvas id="chart-pie2" class="chart-canvas" height="200"></canvas>
+                  <div class="col-2 text-center px-1">
+                    <a class="btn btn-link px-3" href="javascript:;">
+                      <i class="fa fa-github text-white text-lg"></i>
+                    </a>
                   </div>
-                </div>
-                <div class="col-5 my-auto">
-                  <span class="badge badge-md badge-dot me-4 d-block text-start">
-                    <i class="bg-info"></i>
-                    <span class="text-dark text-xs">Free Space</span>
-                  </span>
-                  <span class="badge badge-md badge-dot me-4 d-block text-start">
-                    <i class="bg-primary"></i>
-                    <span class="text-dark text-xs">Used Space</span>
-                  </span>
-                  <!-- <span class="badge badge-md badge-dot me-4 d-block text-start">
-                    <i class="bg-dark"></i>
-                    <span class="text-dark text-xs">Organic</span>
-                  </span>
-                  <span class="badge badge-md badge-dot me-4 d-block text-start">
-                    <i class="bg-secondary"></i>
-                    <span class="text-dark text-xs">Referral</span>
-                  </span> -->
-                </div>
-              </div>
-            </div>
-            <div class="card-footer pt-0 pb-0 p-3 d-flex align-items-center">
-              <div class="w-60">
-                <p class="text-sm">
-                  Resources occupied by the server
-                </p>
-              </div>
-              <div class="w-40 text-end">
-                <a class="btn bg-light mb-3 text-end" href="javascript:;">Read more</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-sm-6">
-          <div class="card h-100">
-            <div class="card-header pb-0 p-3">
-              <div class="d-flex justify-content-between">
-                <h6 class="mb-0">Server C</h6>
-                <button type="button"
-                  class="btn btn-icon-only btn-rounded btn-outline-secondary mb-0 ms-2 btn-sm d-flex align-items-center justify-content-center"
-                  data-bs-toggle="tooltip" data-bs-placement="bottom" title=""
-                  data-bs-original-title="See Resources Server">
-                  <i class="material-icons text-sm">priority_high</i>
-                </button>
-              </div>
-            </div>
-            <div class="card-body pb-0 p-3 mt-4">
-              <div class="row">
-                <div class="col-7 text-start">
-                  <div class="chart">
-                    <canvas id="chart-pie3" class="chart-canvas" height="200"></canvas>
+                  <div class="col-2 text-center me-auto">
+                    <a class="btn btn-link px-3" href="javascript:;">
+                      <i class="fa fa-google text-white text-lg"></i>
+                    </a>
                   </div>
+                </div> -->
+              </div>
+            </div>
+            <div class="card-body">
+              <form role="form" class="text-start">
+                <div class="input-group input-group-outline my-3">
+                  <label class="form-label">Email</label>
+                  <input type="email" class="form-control">
                 </div>
-                <div class="col-5 my-auto">
-                  <span class="badge badge-md badge-dot me-4 d-block text-start">
-                    <i class="bg-info"></i>
-                    <span class="text-dark text-xs">Free Space</span>
-                  </span>
-                  <span class="badge badge-md badge-dot me-4 d-block text-start">
-                    <i class="bg-primary"></i>
-                    <span class="text-dark text-xs">Used Space</span>
-                  </span>
-                  <!-- <span class="badge badge-md badge-dot me-4 d-block text-start">
-                    <i class="bg-dark"></i>
-                    <span class="text-dark text-xs">Organic</span>
-                  </span>
-                  <span class="badge badge-md badge-dot me-4 d-block text-start">
-                    <i class="bg-secondary"></i>
-                    <span class="text-dark text-xs">Referral</span>
-                  </span> -->
+                <div class="input-group input-group-outline mb-3">
+                  <label class="form-label">Password</label>
+                  <input type="password" class="form-control">
                 </div>
-              </div>
-            </div>
-            <div class="card-footer pt-0 pb-0 p-3 d-flex align-items-center">
-              <div class="w-60">
-                <p class="text-sm">
-                  Resources occupied by the server
-                </p>
-              </div>
-              <div class="w-40 text-end">
-                <a class="btn bg-light mb-3 text-end" href="javascript:;">Read more</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      <div class="row mt-4">
-        <div class="col-lg-12 col-sm-6 mt-sm-0 mt-4">
-          <div class="card">
-            <div class="card-header pb-0 p-3">
-              <div class="d-flex justify-content-between">
-                <h6 class="mb-0">Servers Traffics</h6>
-                <button type="button"
-                  class="btn btn-icon-only btn-rounded btn-outline-secondary mb-0 ms-2 btn-sm d-flex align-items-center justify-content-center"
-                  data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="See Traffics">
-                  <i class="material-icons text-sm">priority_high</i>
-                </button>
-              </div>
-              <div class="d-flex align-items-center">
-                <span class="badge badge-md badge-dot me-4">
-                  <i class="bg-primary"></i>
-                  <span class="text-dark text-xs">Server A</span>
-                </span>
-                <span class="badge badge-md badge-dot me-4">
-                  <i class="bg-dark"></i>
-                  <span class="text-dark text-xs">Server B</span>
-                </span>
-                <span class="badge badge-md badge-dot me-4">
-                  <i class="bg-success"></i>
-                  <span class="text-dark text-xs">Server C</span>
-                </span>
-              </div>
-            </div>
-            <div class="card-body p-3">
-              <div class="chart">
-                <canvas id="chart-line" class="chart-canvas" height="300"></canvas>
-              </div>
+                <div class="form-check form-switch d-flex align-items-center mb-3">
+                  <input class="form-check-input" type="checkbox" id="rememberMe" checked>
+                  <label class="form-check-label mb-0 ms-3" for="rememberMe">Remember me</label>
+                </div>
+                <div class="text-center mt-4">
+                  <button type="button" class="btn bg-gradient-primary w-100 my-4 mb-2">Sign in</button>
+                </div>
+                <!-- <p class="mt-4 text-sm text-center">
+                  Don't have an account?
+                  <a href="../../../pages/authentication/signup/illustration.html"
+                    class="text-primary text-gradient font-weight-bold">Sign up</a>
+                </p> -->
+              </form>
             </div>
           </div>
         </div>
@@ -523,293 +380,135 @@
   <script src="../../assets/js/plugins/dragula/dragula.min.js"></script>
   <script src="../../assets/js/plugins/jkanban/jkanban.js"></script>
   <script src="../../assets/js/plugins/chartjs.min.js"></script>
+  <script src="../../assets/js/plugins/world.js"></script>
   <script>
-    var ctx1 = document.getElementById("chart-line").getContext("2d");
-    var ctx2 = document.getElementById("chart-pie1").getContext("2d");
-    var ctx22 = document.getElementById("chart-pie2").getContext("2d");
-    var ctx23 = document.getElementById("chart-pie3").getContext("2d");
-
-    // Line chart
-    new Chart(ctx1, {
+    var ctx2 = document.getElementById("chart-line").getContext("2d");
+    new Chart(ctx2, {
       type: "line",
       data: {
-        labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+        labels: ["11:56", "12:05", "12:14", "12:23", "12:32", "12:41", "12:50"],
         datasets: [{
-          label: "Server A",
-          tension: 0,
-          pointRadius: 5,
-          pointBackgroundColor: "#e91e63",
-          pointBorderColor: "transparent",
-          borderColor: "#e91e63",
-          borderWidth: 4,
-          backgroundColor: "transparent",
-          fill: true,
-          data: [50, 100, 200, 190, 400, 350, 500, 450, 700],
-          maxBarThickness: 6
-        },
-        {
-          label: "Server B",
+          label: "Processor Load",
           tension: 0,
           borderWidth: 0,
           pointRadius: 5,
-          pointBackgroundColor: "#3A416F",
+          pointBackgroundColor: "rgba(255, 255, 255, .8)",
           pointBorderColor: "transparent",
-          borderColor: "#3A416F",
+          borderColor: "rgba(255, 255, 255, .8)",
+          borderColor: "rgba(255, 255, 255, .8)",
           borderWidth: 4,
           backgroundColor: "transparent",
           fill: true,
-          data: [10, 30, 40, 120, 150, 220, 280, 250, 280],
+          data: [1.7, 1, 0.7, 1.8, 2.2, 2.4, 1.2],
           maxBarThickness: 6
+
+        }],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false,
+          }
         },
-        {
-          label: "Server C",
-          tension: 0,
-          borderWidth: 0,
-          pointRadius: 5,
-          pointBackgroundColor: "#4caf50",
-          pointBorderColor: "transparent",
-          borderColor: "#4caf50",
-          borderWidth: 4,
-          backgroundColor: "transparent",
-          fill: true,
-          data: [10, 20, 5, 25, 15, 17, 55, 65, 2],
-          maxBarThickness: 6
+        interaction: {
+          intersect: false,
+          mode: 'index',
+        },
+        scales: {
+          y: {
+            grid: {
+              drawBorder: false,
+              display: true,
+              drawOnChartArea: true,
+              drawTicks: false,
+              borderDash: [5, 5],
+              color: 'rgba(255, 255, 255, .2)'
+            },
+            ticks: {
+              display: true,
+              color: '#f8f9fa',
+              padding: 10,
+              font: {
+                size: 14,
+                weight: 300,
+                family: "Roboto",
+                style: 'normal',
+                lineHeight: 1
+              },
+            }
+          },
+          x: {
+            grid: {
+              drawBorder: false,
+              display: false,
+              drawOnChartArea: false,
+              drawTicks: false,
+              borderDash: [5, 5]
+            },
+            ticks: {
+              display: true,
+              color: '#f8f9fa',
+              padding: 10,
+              font: {
+                size: 14,
+                weight: 300,
+                family: "Roboto",
+                style: 'normal',
+                lineHeight: 1
+              },
+            }
+          },
+        },
+      },
+    });
+    // Initialize the vector map
+    var map = new jsVectorMap({
+      selector: "#map",
+      map: "world_merc",
+      zoomOnScroll: false,
+      zoomButtons: false,
+      selectedMarkers: [1, 3],
+      markersSelectable: true,
+      markers: [{
+        name: "USA",
+        coords: [40.71296415909766, -74.00437720027804]
+      },
+      {
+        name: "Germany",
+        coords: [51.17661451970939, 10.97947735117339]
+      },
+      {
+        name: "Brazil",
+        coords: [-7.596735421549542, -54.781694323779185]
+      },
+      {
+        name: "Russia",
+        coords: [62.318222797104276, 89.81564777631716]
+      },
+      {
+        name: "China",
+        coords: [22.320178999475512, 114.17161225541399],
+        style: {
+          fill: '#E91E63'
         }
-        ],
+      }
+      ],
+      markerStyle: {
+        initial: {
+          fill: "#e91e63"
+        },
+        hover: {
+          fill: "E91E63"
+        },
+        selected: {
+          fill: "E91E63"
+        }
       },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: {
-            display: false,
-          }
-        },
-        interaction: {
-          intersect: false,
-          mode: 'index',
-        },
-        scales: {
-          y: {
-            grid: {
-              drawBorder: false,
-              display: true,
-              drawOnChartArea: true,
-              drawTicks: false,
-              borderDash: [5, 5],
-              color: '#c1c4ce5c'
-            },
-            ticks: {
-              display: true,
-              padding: 10,
-              color: '#9ca2b7',
-              font: {
-                size: 14,
-                weight: 300,
-                family: "Roboto",
-                style: 'normal',
-                lineHeight: 2
-              },
-            }
-          },
-          x: {
-            grid: {
-              drawBorder: false,
-              display: true,
-              drawOnChartArea: true,
-              drawTicks: true,
-              borderDash: [5, 5],
-              color: '#c1c4ce5c'
-            },
-            ticks: {
-              display: true,
-              color: '#9ca2b7',
-              padding: 10,
-              font: {
-                size: 14,
-                weight: 300,
-                family: "Roboto",
-                style: 'normal',
-                lineHeight: 2
-              },
-            }
-          },
-        },
-      },
-    });
 
 
-    // Pie chart
-    new Chart(ctx2, {
-      type: "pie",
-      data: {
-        labels: ['Free Space', 'Used Space'],
-        datasets: [{
-          label: "Projects",
-          weight: 9,
-          cutout: 0,
-          tension: 0.9,
-          pointRadius: 2,
-          borderWidth: 1,
-          backgroundColor: ['#17c1e8', '#e91e63'],
-          data: [23, 77],
-          fill: false
-        }],
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: {
-            display: false,
-          }
-        },
-        interaction: {
-          intersect: false,
-          mode: 'index',
-        },
-        scales: {
-          y: {
-            grid: {
-              drawBorder: false,
-              display: false,
-              drawOnChartArea: false,
-              drawTicks: false,
-              color: '#c1c4ce5c'
-            },
-            ticks: {
-              display: false
-            }
-          },
-          x: {
-            grid: {
-              drawBorder: false,
-              display: false,
-              drawOnChartArea: false,
-              drawTicks: false,
-              color: '#c1c4ce5c'
-            },
-            ticks: {
-              display: false,
-            }
-          },
-        },
-      },
     });
-    new Chart(ctx23, {
-      type: "pie",
-      data: {
-        labels: ['Free Space', 'Used Space'],
-        datasets: [{
-          label: "Projects",
-          weight: 9,
-          cutout: 0,
-          tension: 0.9,
-          pointRadius: 2,
-          borderWidth: 1,
-          backgroundColor: ['#17c1e8', '#e91e63'],
-          data: [62, 38],
-          fill: false
-        }],
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: {
-            display: false,
-          }
-        },
-        interaction: {
-          intersect: false,
-          mode: 'index',
-        },
-        scales: {
-          y: {
-            grid: {
-              drawBorder: false,
-              display: false,
-              drawOnChartArea: false,
-              drawTicks: false,
-              color: '#c1c4ce5c'
-            },
-            ticks: {
-              display: false
-            }
-          },
-          x: {
-            grid: {
-              drawBorder: false,
-              display: false,
-              drawOnChartArea: false,
-              drawTicks: false,
-              color: '#c1c4ce5c'
-            },
-            ticks: {
-              display: false,
-            }
-          },
-        },
-      },
-    });
-
-    new Chart(ctx22, {
-      type: "pie",
-      data: {
-        labels: ['Free Space', 'Used Space'],
-        datasets: [{
-          label: "Projects",
-          weight: 9,
-          cutout: 0,
-          tension: 0.9,
-          pointRadius: 2,
-          borderWidth: 1,
-          backgroundColor: ['#17c1e8', '#e91e63'],
-          data: [42, 58],
-          fill: false
-        }],
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: {
-            display: false,
-          }
-        },
-        interaction: {
-          intersect: false,
-          mode: 'index',
-        },
-        scales: {
-          y: {
-            grid: {
-              drawBorder: false,
-              display: false,
-              drawOnChartArea: false,
-              drawTicks: false,
-              color: '#c1c4ce5c'
-            },
-            ticks: {
-              display: false
-            }
-          },
-          x: {
-            grid: {
-              drawBorder: false,
-              display: false,
-              drawOnChartArea: false,
-              drawTicks: false,
-              color: '#c1c4ce5c'
-            },
-            ticks: {
-              display: false,
-            }
-          },
-        },
-      },
-    });
-
 
   </script>
   <script>
